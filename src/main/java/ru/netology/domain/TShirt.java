@@ -24,9 +24,15 @@ public class TShirt extends Product {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         TShirt shirt = (TShirt) o;
         return Objects.equals(color, shirt.color) &&
                 Objects.equals(size, shirt.size);
